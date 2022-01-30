@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Sample 01 - String</title>
+</head>
+<body>
+
+    <section>
+
+        <p id = "output" ></p>
+
+    </section>
+
+
+<script>
+
+var total = function(price) {
+    var tax =0.08;
+    return price + price*tax;
+}   
+
+// viet theo kieu arrow function
+// const total = (price,tax =0.08) => {return price+ price*tax}
+
+var hour = new Date().getHours();
+
+if (hour >=19 && hour <21) {
+    // window.alert('お弁当30%OFF!');
+    console.log('gia mot coc coffee la ' + total(80) +' VND');
+document.getElementById('output').textContent = 'Khung gio khuyen mai gia mot coc coffee la ' + total(80) +'VND';
+
+}else if (hour === 9 || hour === 15){
+    window.alert('お弁当1個買ったらおにぎり1個おまけ!');
+}else {
+    window.alert('お弁当はいかがでしょうか');
+
+    console.log('gia mot coc coffee la ' + total(8000) +' VND');
+document.getElementById('output').textContent = 'Khung gio khuyen mai gia mot coc coffee la ' + total(80) +'VND';
+    
+}
+
+</script>
+
+</body>
+</html>
